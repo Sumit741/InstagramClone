@@ -1,0 +1,91 @@
+.postContainer {
+  background-color: white;
+  margin-top: 17px;
+  border: 1px solid rgb(221, 219, 219);
+  border-radius: 10px;
+}
+
+.postHeader {
+  position: relative;
+  width: 100%;
+  padding: 13px;
+  display: flex;
+}
+
+.postHeader img {
+  width: 40px;
+  border-radius: 100%;
+  height: 40px;
+}
+
+.postHeader div {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.postHeader div span:nth-child(1) {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.postHeader div span:nth-child(2) {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.dots {
+  align-self: center;
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+
+.media {
+  width: 100%;
+}
+
+.media img {
+  width: 100%;
+}
+
+.activity {
+  width: 100%;
+  padding: 13px;
+  padding-bottom: 8px;
+  display: flex;
+  font-size: 24px;
+  justify-content: space-between;
+}
+
+.likeComment {
+  width: 111px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.postComment {
+  width: 100%;
+  border-top: 1px solid rgb(221, 219, 219);
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.postComment input {
+  outline: none;
+  border: none;
+  width: 79%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.postComment span {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(0, 149, 246);
+}

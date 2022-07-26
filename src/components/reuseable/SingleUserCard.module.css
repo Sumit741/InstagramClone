@@ -1,0 +1,29 @@
+.cardContainer {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.cardContainer:hover {
+  background-color: #fafafa;
+}
+
+.cardContainer img {
+  height: 57px;
+  width: 57px;
+  border-radius: 100%;
+}
+.cardContainer div {
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.cardContainer div span:nth-last-child(1) {
+  color: var(--lightGrey);
+}

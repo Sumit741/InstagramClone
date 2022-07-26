@@ -1,0 +1,35 @@
+.searchContainer {
+  position: fixed;
+  height: 365px;
+  width: 375px;
+  background-color: white;
+  z-index: 2;
+  top: 65px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  padding: 13px;
+}
+.pointer {
+  font-size: 25px;
+  position: fixed;
+  top: 50px;
+  color: white;
+  z-index: 6 !important;
+}
+.searchContainer span {
+  color: var(--black);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.searchResult {
+  height: 96%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchResult span {
+  font-size: 14px;
+  color: var(--lightGrey);
+}

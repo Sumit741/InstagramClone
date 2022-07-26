@@ -1,0 +1,95 @@
+.messageContainer {
+  position: relative;
+  top: 75px;
+  margin: auto;
+  border: 1px solid rgb();
+  height: 569px;
+  width: 934px;
+  border: 1px solid var(--bordergrey);
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+}
+
+.friends {
+  width: 38%;
+  border-right: 1px solid var(--bordergrey);
+}
+.message {
+  width: 62%;
+}
+
+.friends .head {
+  height: 11%;
+  border-bottom: 1px solid var(--bordergrey);
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 22px;
+}
+.friends .head div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.friends .head div span {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.friends .friendslist {
+  height: 89%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.edit {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.message div:nth-child(1) {
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+}
+
+.message h6 {
+  font-weight: 300;
+  font-size: 22px;
+  margin: 0;
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+.message span {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--lightGrey);
+  margin-bottom: 20px;
+}
+
+.message button {
+  background-color: var(--darkblue);
+  border: none;
+  font-size: 14px;
+  color: white;
+  font-weight: 600;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}

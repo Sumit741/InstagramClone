@@ -1,0 +1,148 @@
+.container {
+  width: 850px;
+  position: relative;
+  top: 90px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.posts {
+  width: 55%;
+}
+
+.storySection {
+  width: 100%;
+  background-color: white;
+  border: 1px solid rgb(221, 219, 219);
+  border-radius: 10px;
+  padding: 20px 10px;
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.storyComp {
+  margin-left: 15px;
+}
+
+.storySection::-webkit-scrollbar {
+  display: none;
+}
+
+.postSection {
+  width: 100%;
+}
+
+.footers {
+  width: 40%;
+  padding: 10px 0;
+}
+
+.firstComp {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.firstComp img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+
+.firstComp div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  position: relative;
+}
+.firstComp div span:nth-child(1) {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.firstComp div span:nth-child(2) {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(142, 142, 142);
+}
+
+.accountSwitch {
+  position: absolute;
+  right: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgb(0, 149, 246);
+  cursor: pointer;
+}
+
+.suggestions div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.suggestions div:nth-child(1) span:nth-child(1) {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(142, 142, 142);
+}
+
+.suggestions div:nth-child(1) span:nth-child(2) {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.followersContainer {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.usefulLinks {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.usefulLinks a {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(199, 199, 199);
+}
+
+.suggestionBox {
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid rgb(221, 219, 219);
+  margin-top: 15px;
+  padding: 20px;
+}
+
+.suggestionBox .div1 {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.suggestionBox .div1 span:nth-child(1) {
+  color: var(--lightGrey);
+}
+
+.suggestionBox .div2 {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.suggestionBox .div2::-webkit-scrollbar {
+  display: none;
+}
