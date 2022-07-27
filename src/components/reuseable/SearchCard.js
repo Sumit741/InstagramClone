@@ -2,8 +2,13 @@ import React from "react";
 import styles from "./SearchCard.module.css";
 import { VscTriangleUp } from "react-icons/vsc";
 import { BsTriangleFill } from "react-icons/bs";
+import { useSelector } from "react-redux";
 
 function SearchCard() {
+  const showSearch = useSelector((state) => state.search.showSearchLabel);
+  const showNotFound = useSelector((state) => state.search.showNotFound);
+  const searchResults = useSelector((state) => state.search.searchResult);
+  console.log(searchResults);
   return (
     <div
       style={{
@@ -19,7 +24,6 @@ function SearchCard() {
           style={{
             position: "relative",
             width: "100%",
-            background: "blue",
             display: "flex",
             justifyContent: "center",
           }}
@@ -33,8 +37,25 @@ function SearchCard() {
         >
           <span>Search Results</span>
         </div>
+
         <div className={styles.searchResult}>
-          <span>No Searches</span>
+          <div className={styles.spans}>
+            {showSearch && <span>No Searches</span>}
+            {showNotFound && <span>No Matched Results</span>}
+          </div>
+          {searchResults.length > 0 && (
+            <div className={styles.resultSection}>
+              {searchResults.map((user) => (
+                <div key={user.id} className={styles.indSearch}>
+                  <img src={user.src.original} />
+                  <div>
+                    <span>{user.photographer.split(" ").join("_")}</span>
+                    <span>{user.photographer}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -9,19 +9,40 @@ import { IoCompassOutline } from "react-icons/io5";
 import { AiOutlineHeart } from "react-icons/ai";
 import { useNavigate } from "react-router";
 import { Link, NavLink } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { AddFileActions } from "../redux/AddFileModal";
 import { SearchActions } from "../redux/Search";
 
 function Nav() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const users = useSelector((state) => state.picture.users);
   const addFileHandler = () => {
     dispatch(AddFileActions.setStatus());
   };
 
   const clickHandler = () => {
     dispatch(SearchActions.showCard());
+  };
+
+  const changeHandler = (e) => {
+    if (e.target.value === "") {
+      dispatch(SearchActions.showSearch());
+      dispatch(SearchActions.setSearchResult({ results: [] }));
+    } else {
+      dispatch(SearchActions.hideSearch());
+      const result = users.filter((user) =>
+        user.photographer.toLowerCase().includes(e.target.value.toLowerCase())
+      );
+
+      if (result.length > 0) {
+        dispatch(SearchActions.setSearchResult({ results: result }));
+        dispatch(SearchActions.hideFound());
+      } else {
+        dispatch(SearchActions.showFound());
+        dispatch(SearchActions.setSearchResult({ results: [] }));
+      }
+    }
   };
   return (
     <nav className={styles.navbar}>
@@ -34,7 +55,12 @@ function Nav() {
       />
       <div className={styles.searchSection}>
         <BsSearch className={styles.searchIcon} />
-        <input type="search" placeholder="Search" onClick={clickHandler} />
+        <input
+          type="search"
+          placeholder="Search"
+          onClick={clickHandler}
+          onChange={changeHandler}
+        />
       </div>
       <div className={styles.menus}>
         <div>

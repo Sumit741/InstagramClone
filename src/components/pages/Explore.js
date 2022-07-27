@@ -3,11 +3,12 @@ import styles from "./Explore.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { PictureActions } from "../redux/Pictures";
 import { BsFillHeartFill, BsFillChatFill } from "react-icons/bs";
+import ReactLoading from "react-loading";
 
 function Explore() {
   const dispatch = useDispatch();
   const pictures = useSelector((state) => state.picture.pictures);
-  console.log(pictures);
+  const [loading, setLoading] = useState(true);
   useState(() => {
     fetch("https://api.pexels.com/v1/search?query=gentleman", {
       headers: {
@@ -17,13 +18,19 @@ function Explore() {
     })
       .then((response) => response.json())
       .then((result) => {
-        console.log(result);
         dispatch(PictureActions.setPictures({ pictures: result.photos }));
+        setLoading(false);
       });
   }, []);
 
   return (
     <div className={styles.imageContainer}>
+      {loading && (
+        <div className={styles.loading}>
+          <ReactLoading type="spokes" color="#36565c" height={20} width={20} />
+        </div>
+      )}
+
       {pictures.map((item) => (
         <div key={item.id} className={styles.image}>
           <img src={item.src.original} />

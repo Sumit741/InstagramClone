@@ -22,7 +22,7 @@ function MessagePage() {
         </div>
         <div className={styles.friendslist}>
           {users.map((user) => (
-            <div>
+            <div key={user.id}>
               <SingleUserCard
                 image={user.src.original}
                 username={user.photographer.split(" ").join("_")}

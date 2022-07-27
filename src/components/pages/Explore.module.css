@@ -49,3 +49,12 @@
 .imageContainer .image .layer:hover {
   opacity: 1;
 }
+.imageContainer .loading {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
