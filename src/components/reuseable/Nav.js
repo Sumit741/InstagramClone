@@ -12,11 +12,17 @@ import { Link, NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { AddFileActions } from "../redux/AddFileModal";
 import { SearchActions } from "../redux/Search";
+import { BsTriangleFill, BsBookmark } from "react-icons/bs";
+import { CgProfile } from "react-icons/cg";
+import { AiOutlineSetting } from "react-icons/ai";
+import { TiArrowSync } from "react-icons/ti";
+import { ProfileActions } from "../redux/Profile";
 
 function Nav() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const users = useSelector((state) => state.picture.users);
+  const showCard = useSelector((state) => state.profile.showCard);
   const addFileHandler = () => {
     dispatch(AddFileActions.setStatus());
   };
@@ -44,10 +50,18 @@ function Nav() {
       }
     }
   };
+
+  const profileHandler = () => {
+    dispatch(ProfileActions.toggleCard());
+  };
+
+  const closeMenu = () => {
+    dispatch(ProfileActions.hideCard());
+  };
   return (
     <nav className={styles.navbar}>
       <img
-        src="instagram.png"
+        src="/instagram.png"
         className={styles.instalogo}
         onClick={() => {
           navigate("/");
@@ -62,7 +76,7 @@ function Nav() {
           onChange={changeHandler}
         />
       </div>
-      <div className={styles.menus}>
+      <div className={`${styles.menus} navbar`}>
         <div>
           <NavLink to="/">
             <MdHomeFilled className={styles.menuIcons} />
@@ -85,8 +99,38 @@ function Nav() {
         <div>
           <AiOutlineHeart className={styles.menuIcons} />
         </div>
-        <div className={styles.profile}>
-          <img src="pp.png" />
+        <div className={styles.profile} onClick={profileHandler}>
+          <img src="/pp.png" />
+          {showCard && (
+            <div className={styles.menuCard}>
+              <div>
+                <BsTriangleFill className={styles.pointedIcon} />
+              </div>
+              <div className={styles.options}>
+                <Link to="/profile/posts">
+                  <CgProfile /> <span>Profile</span>
+                </Link>
+                <Link to="/saved">
+                  <BsBookmark /> <span>Saved</span>
+                </Link>
+                <Link to="/settings">
+                  <AiOutlineSetting /> <span>Settings</span>
+                </Link>
+                <Link to="/settings">
+                  <TiArrowSync /> <span>Switch accounts</span>
+                </Link>
+                <Link
+                  to="/"
+                  style={{
+                    borderTop: "1px solid rgb(221, 219, 219)",
+                    fontSize: "14px",
+                  }}
+                >
+                  Logout
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </nav>

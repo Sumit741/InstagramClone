@@ -55,14 +55,61 @@
 }
 
 .profile {
-  background-color: red;
   width: 25px;
   height: 25px;
   border-radius: 50%;
   border: 1px solid black;
   cursor: pointer;
+  position: relative;
 }
 
+.profile .menuCard {
+  background-color: white;
+  position: fixed;
+  width: 230px;
+  right: 102px;
+  height: 205px;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menuCard div:nth-child(1) {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.menuCard div:nth-child(1) .pointedIcon {
+  color: white;
+  margin-top: -10px;
+}
+
+.profile .menuCard .options {
+  height: 98%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile .menuCard .options a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.profile .menuCard .options a:hover {
+  background-color: #efefef;
+}
+
+.profile .menuCard .options a span {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
 .profile img {
   width: 100%;
   border-radius: 50%;

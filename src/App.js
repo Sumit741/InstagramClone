@@ -15,6 +15,10 @@ import Explore from "./components/pages/Explore";
 import { PictureActions } from "./components/redux/Pictures";
 import SearchCard from "./components/reuseable/SearchCard";
 import { SearchActions } from "./components/redux/Search";
+import Profile from "./components/pages/Profile";
+import Post from "./components/pages/Post";
+import Saved from "./components/pages/Saved";
+import Tagged from "./components/pages/Tagged";
 
 function App() {
   const dispatch = useDispatch();
@@ -54,6 +58,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/messages" element={<MessagePage />} />
           <Route path="/explore" element={<Explore />} />
+          <Route path="/profile" element={<Profile />}>
+            <Route path="posts" element={<Post />} />
+            <Route path="saved" element={<Saved />} />
+            <Route path="tagged" element={<Tagged />} />
+          </Route>
         </Routes>
       </div>
     </BrowserRouter>

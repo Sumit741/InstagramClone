@@ -1,0 +1,112 @@
+.profileContainer {
+  position: relative;
+  top: 90px;
+  width: 935px;
+  margin: auto;
+}
+
+.profileHead {
+  /* width: 620px; */
+  margin-left: 72px;
+  display: flex;
+}
+
+.profileHead img {
+  height: 152px;
+  width: 152px;
+  border-radius: 100%;
+}
+
+.profileHead .profileHeadRight {
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profileHead .profileHeadRight .div1 span {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.profileHead .profileHeadRight .div1 {
+  display: flex;
+  align-items: center;
+}
+.profileHead .profileHeadRight .div1 button {
+  margin-left: 24px;
+  margin-right: 24px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--black);
+  height: 30px;
+  width: 95px;
+  background-color: transparent;
+  border: 1px solid var(--bordergrey);
+  border-radius: 5px;
+}
+
+.profileHead .profileHeadRight .div2 {
+  display: flex;
+}
+
+.profileHead .profileHeadRight .div2 div {
+  display: flex;
+  align-items: center;
+  margin-right: 38px;
+  margin-top: 25px;
+}
+
+.profileHead .profileHeadRight .div2 div span {
+  font-weight: 400;
+}
+
+.profileHead .profileHeadRight .div2 div span:nth-child(1) {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black);
+  margin-right: 5px;
+}
+
+.profileHead .profileHeadRight .username {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black);
+  margin-top: 25px;
+}
+
+.profileFoot {
+  margin-top: 45px;
+  width: 100%;
+  border-top: 1px solid var(--bordergrey);
+}
+
+.profileFoot .navs {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.profileFoot .navs a {
+  margin-right: 10px;
+  text-decoration: none;
+  padding-top: 18px;
+  /* border-top: 1px solid black; */
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  color: var(--lightGrey);
+}
+
+.profileFoot .navs a:nth-child(2) {
+  margin: 0 65px;
+}
+
+.profileFoot .navs a .logo {
+  font-size: 12px;
+  margin-right: 8px;
+}
+.profileFoot .outlet {
+  width: 100%;
+  padding-bottom: 20px;
+}

@@ -16,11 +16,12 @@ html {
   --bordergrey: rgb(221, 219, 219);
 }
 
-.active-link {
-  color: red;
-}
-
-.active {
+.navbar .active {
   color: rgb(231, 21, 56);
   color: rgb(92, 91, 91);
+}
+
+.profileLinks .active {
+  border-top: 1px solid black;
+  color: var(--black) !important;
 }
