@@ -110,7 +110,7 @@ function Nav() {
                 <Link to="/profile/posts">
                   <CgProfile /> <span>Profile</span>
                 </Link>
-                <Link to="/saved">
+                <Link to="/profile/saved">
                   <BsBookmark /> <span>Saved</span>
                 </Link>
                 <Link to="/settings">

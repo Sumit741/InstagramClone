@@ -39,10 +39,8 @@ function SearchCard() {
         </div>
 
         <div className={styles.searchResult}>
-          <div className={styles.spans}>
-            {showSearch && <span>No Searches</span>}
-            {showNotFound && <span>No Matched Results</span>}
-          </div>
+          {showSearch && <span>No Searches</span>}
+          {showNotFound && <span>No Matched Results</span>}
           {searchResults.length > 0 && (
             <div className={styles.resultSection}>
               {searchResults.map((user) => (

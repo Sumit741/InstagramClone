@@ -34,6 +34,7 @@
   font-size: 14px;
   color: var(--lightGrey);
   width: 100%;
+  text-align: center;
 }
 
 .searchResult .resultSection {

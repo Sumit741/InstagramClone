@@ -1,0 +1,225 @@
+.postModalContainer {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.postModalContainer .closeIcon {
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 25px;
+}
+.postModalContainer .containerModal {
+  height: 615px;
+  width: 950px;
+  background-color: black;
+  display: flex;
+}
+
+.postModalContainer .containerModal .div1 {
+  width: 47%;
+  align-items: center;
+  display: flex;
+}
+.postModalContainer .containerModal .div1 img {
+  width: 100%;
+  height: 92%;
+  object-fit: cover;
+}
+
+.postModalContainer .containerModal .div2 {
+  width: 53%;
+  background-color: white;
+  height: 100%;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.postModalContainer .containerModal .div2 .header {
+  height: 72px;
+  height: 11%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  position: relative;
+}
+.postModalContainer .containerModal .div2 .header span {
+  cursor: pointer;
+}
+
+.postModalContainer .containerModal .div2 .header img {
+  width: 33px;
+  height: 33px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.postModalContainer .containerModal .div2 .header .headerdiv1 {
+  margin-left: 13px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.postModalContainer
+  .containerModal
+  .div2
+  .header
+  .headerdiv1
+  div
+  span:nth-child(1) {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.postModalContainer
+  .containerModal
+  .div2
+  .header
+  .headerdiv1
+  div
+  span:nth-child(3) {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(0, 149, 246);
+}
+
+.postModalContainer .containerModal .div2 .header .dots {
+  position: absolute;
+  right: 18px;
+  cursor: pointer;
+}
+
+.containerModal .div2 .commentSection {
+  width: 100%;
+  height: 63%;
+  border-top: 1px solid var(--bordergrey);
+  border-bottom: 1px solid var(--bordergrey);
+  padding: 18px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.containerModal .div2 .commentSection::-webkit-scrollbar {
+  display: none;
+}
+
+/*FOR CAPTION*/
+.containerModal .div2 .commentSection .postCaption {
+  width: 100%;
+  display: flex;
+}
+
+.containerModal .div2 .commentSection .postCaption img {
+  height: 33px;
+  width: 33px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.containerModal .div2 .commentSection .postCaption div {
+  margin-left: 13px;
+}
+
+.containerModal .div2 .commentSection .postCaption div span {
+  font-size: 14px;
+}
+.containerModal .div2 .commentSection .postCaption div span:nth-child(1) {
+  font-weight: 600;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+/*FOR COMMENTS*/
+.containerModal .div2 .commentSection .comments {
+  width: 100%;
+  display: flex;
+  margin-top: 22px;
+}
+
+.containerModal .div2 .commentSection .comments img {
+  height: 33px;
+  width: 33px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.containerModal .div2 .commentSection .comments div {
+  margin-left: 13px;
+}
+
+.containerModal .div2 .commentSection .comments div span {
+  font-size: 14px;
+}
+.containerModal .div2 .commentSection .comments div span:nth-child(1) {
+  font-weight: 600;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.containerModal .div2 .foot .likecomshare {
+  width: 100%;
+  margin-top: 14px;
+  padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.containerModal .div2 .foot .likecomshare div .icon {
+  font-size: 24px;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.containerModal .div2 .foot .likecomshare div .icon:nth-child(2) {
+  margin: 0 18px;
+}
+.containerModal .div2 .foot .likecomshare div .icon:nth-child(4) {
+  float: right;
+}
+
+.containerModal .div2 .foot .likecomshare div .icon:hover {
+  color: rgb(121, 120, 120);
+}
+
+.containerModal .div2 .foot .likecomshare span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--black);
+  margin-top: 10px;
+}
+
+.containerModal .div2 .foot .writingContainer {
+  border-top: 1px solid var(--bordergrey);
+  margin-top: 12px;
+  padding: 8px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.writingContainer input {
+  outline: none;
+  border: none;
+  width: 80%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.writingContainer span {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(0, 149, 246);
+}
