@@ -113,7 +113,7 @@ function Nav() {
                 <Link to="/profile/saved">
                   <BsBookmark /> <span>Saved</span>
                 </Link>
-                <Link to="/settings">
+                <Link to="/settings/edit">
                   <AiOutlineSetting /> <span>Settings</span>
                 </Link>
                 <Link to="/settings">

@@ -15,6 +15,7 @@ html {
   --darkblue: #0095f6;
   --bordergrey: rgb(221, 219, 219);
   --black: rgb(38, 38, 38);
+  --hoverwhite: #efefef;
 }
 
 .navbar .active {
@@ -25,4 +26,10 @@ html {
 .profileLinks .active {
   border-top: 1px solid black;
   color: var(--black) !important;
+}
+
+.profileEdit .active {
+  border-left: 2px solid black;
+  padding-left: 31px !important;
+  font-weight: 600;
 }

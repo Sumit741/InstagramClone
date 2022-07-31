@@ -19,6 +19,8 @@ import Profile from "./components/pages/Profile";
 import Post from "./components/pages/Post";
 import Saved from "./components/pages/Saved";
 import Tagged from "./components/pages/Tagged";
+import Settings from "./components/pages/Settings";
+import EditProfile from "./components/pages/EditProfile";
 
 function App() {
   const dispatch = useDispatch();
@@ -62,6 +64,9 @@ function App() {
             <Route path="posts" element={<Post />} />
             <Route path="saved" element={<Saved />} />
             <Route path="tagged" element={<Tagged />} />
+          </Route>
+          <Route path="/settings" element={<Settings />}>
+            <Route path="edit" element={<EditProfile />} />
           </Route>
         </Routes>
       </div>

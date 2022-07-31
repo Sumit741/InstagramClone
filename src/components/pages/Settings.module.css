@@ -1,0 +1,74 @@
+.settingsContainer {
+  width: 934px;
+  background-color: white;
+  position: relative;
+  top: 120px;
+  margin: auto;
+  border: 1px solid var(--bordergrey);
+  display: flex;
+  height: 100%;
+}
+
+.settingsContainer .leftContainer {
+  width: 25.4%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--bordergrey);
+}
+
+.settingsContainer .leftContainer a {
+  width: 100%;
+  text-decoration: none;
+  padding: 18px 33px;
+  padding-right: 0;
+  cursor: pointer;
+}
+
+.settingsContainer .leftContainer a:hover {
+  /* background-color: var(--hoverwhite); */
+  background-color: #f7f7f7;
+  border-left: 2px solid var(--bordergrey);
+  padding-left: 31px;
+}
+
+.leftContainer .active {
+  color: red;
+}
+
+.settingsContainer .Outlet {
+  width: 74.6%;
+}
+.logoSection {
+  width: 100%;
+  padding-left: 33px;
+  border-top: 1px solid var(--bordergrey);
+  padding-bottom: 20px;
+}
+
+.logoSection img {
+  width: 25px;
+}
+
+.logoSection div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.logoSection a {
+  padding: 0 !important;
+  background: none !important;
+}
+
+.logoSection span {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--lightGrey);
+}
+.logoSection span:nth-child(2n) {
+  color: var(--blue) !important;
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  margin-top: -10px;
+  margin-bottom: 8px;
+}
